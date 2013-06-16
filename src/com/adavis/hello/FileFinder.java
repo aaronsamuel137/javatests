@@ -8,10 +8,10 @@ public class FileFinder {
     }
 
     public static File findFile() {
-        String OS = System.getProperty("os.name").toLowerCase().substring(0,3);
+        String OS = System.getProperty("os.name");
         String home;
         Util.print(OS);
-        if (OS.equals("win")) {
+        if (OS.startsWith("Win")) {
             home = System.getProperty("java.io.tmpdir");
         } else {
         home = System.getProperty("user.home");
